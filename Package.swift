@@ -31,6 +31,8 @@ let package = Package(
           .package(url: "https://github.com/apple/swift-nio-zlib-support.git", from: "1.0.0")
         ],
         targets: [
-            .target(name: "Starscream")
+            .target(name: "Starscream",
+                    path: "Sources",
+                    resources: [.copy("PrivacyInfo.xcprivacy")])
         ]
 )
